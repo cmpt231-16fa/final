@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Final: CMPT231"
-subtitle: ""
+subtitle: "Tue 13 Dec 2016 14:00-16:00"
 ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 ---
 
