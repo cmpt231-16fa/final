@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "Final: CMPT231"
+title: "Practise Final: CMPT231"
 subtitle: "Tue 13 Dec 2016 14:00-16:00"
 ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 ---
 
 {% include exam.md %}
 
-### Final exam [120 pts]
+### Practise Final exam [120 pts]
 
 1. *(6 pts)* Chapter 1-3: Complexity, &Theta;, Insertion sort
 
