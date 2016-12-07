@@ -11,9 +11,13 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(6 pts)* Chapter 1-3: Complexity, &Theta;, Insertion sort
 
-1. *(10 pts)* Chapter 4-5: Merge sort, induction, master theorem, randomization
+1. *(7 pts)* Chapter 4-5: Merge sort, induction, master theorem, randomization
 
-1. *(10 pts)* Chapter 6-7: heap sort, priority queue, quick sort
+1. *(3 pts)* Solve the **recurrence**: \`T(n) = 3T(n/3) + log n\`
+
+1. *(6 pts)* Chapter 6-7: heap sort, priority queue, quick sort
+
+1. *(4 pts)* The **median** of *n* numbers can be found in O(n) time (ch9). What is the **worst-case** complexity of Quicksort if the median is used for the pivot? 
 
 1. *(8 pts)* Chapter 8: counting sort, radix sort, bucket sort
 
@@ -29,7 +33,9 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(8 pts)* Chapter 22: graphs, BFS, DFS, topological sort, connected components
 
-1. *(10 pts)* Chapter 23: minimum spanning tree: Prim, Kruskal
+1. *(5 pts)* Chapter 23: minimum spanning tree: Prim, Kruskal
+
+1. *(5 pts)* **Prove**, or demonstrate a **counterexample**: If *T* is a **minimum spanning tree** in a weighted directed graph *(V, E, w)*, then for any vertices *u*, *v* the path between them in *T* is a **shortest path** in the graph.
 
 1. *(8 pts)* Chapter 24: single-source shortest paths: Bellman-Ford, Dijkstra
 
