@@ -39,5 +39,7 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(8 pts)* Chapter 24: single-source shortest paths: Bellman-Ford, Dijkstra
 
+1. *(4 pts)* Consider finding **single-source** shortest paths in a directed, weighed graph with negative-weight edges. A question was asked in lecture whether **Dijkstra's** algorithm with Johnson's **reweighting** would be faster than **Bellman-Ford**, since Dijkstra is faster than B-F when we can assume all edge weights are positive. **Discuss**: would this reweighting be a good idea? 
+
 1. *(10 pts)* Chapter 25: all-pairs shortest paths: Floyd-Warshall, Johnson
 
