@@ -17,7 +17,7 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(2 pts)* Chapter 6-7: heap sort, priority queue, quick sort
 
-1. *(4 pts)* Convert the following array into a **binary max-heap**:
+1. *(4 pts)* Convert the following array into a **binary max-heap**: <br/>
   `[ 5, 10, 3, 1, 6, 2, 4, 8, 7, 9 ]`
 
 1. *(4 pts)* The **median** of *n* numbers can be found in O(n) time (ch9). What is the **worst-case** complexity of Quicksort if the median is used for the pivot? 
