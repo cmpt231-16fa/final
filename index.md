@@ -26,7 +26,8 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(10 pts)* Chapter 11: hash tables, hash functions, open addressing
 
-1. *(5 pts)* Chapter 10,12: linked lists, BSTs, tree ops
+1. *(5 pts)* Demonstrate the following sequence of operations on an empty **binary search tree** ("+X" means insert key "X", "-X" means delete key "X"). Use **successor** for delete. <br/>
+  `+F +T +D +V +K +M +E -F +L +P -T`
 
 1. *(5 pts)* **Pseudocode** a function to count the **leaves** of a binary tree.
 
