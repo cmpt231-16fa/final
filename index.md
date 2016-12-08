@@ -15,7 +15,10 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(3 pts)* Solve the **recurrence**: \`T(n) = 3T(n/3) + log n\`
 
-1. *(6 pts)* Chapter 6-7: heap sort, priority queue, quick sort
+1. *(2 pts)* Chapter 6-7: heap sort, priority queue, quick sort
+
+1. *(4 pts)* Convert the following array into a **binary max-heap**:
+  `[ 5, 10, 3, 1, 6, 2, 4, 8, 7, 9 ]`
 
 1. *(4 pts)* The **median** of *n* numbers can be found in O(n) time (ch9). What is the **worst-case** complexity of Quicksort if the median is used for the pivot? 
 
@@ -23,10 +26,13 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(10 pts)* Chapter 11: hash tables, hash functions, open addressing
 
-1. *(10 pts)* Chapter 10,12: linked lists, BSTs, tree ops
+1. *(5 pts)* Chapter 10,12: linked lists, BSTs, tree ops
+
+1. *(5 pts)* **Pseudocode** a function to count the **leaves** of a binary tree.
 
 1. *(10 pts)* Draw the **B-tree** of t=3 with the following inserted in order.
-  Draw the tree just before and just after each split.  `AGFBKDHMJESIRX`
+  Draw the tree just before and after each insertion which results in a split.
+  `AGFBKDHMJESIRX`
 
 1. *(10 pts)* Demonstrate the dynamic programming solution for optimal
    **parenthesisation** to multiply a list of **matrices** with dimensions:
