@@ -40,6 +40,9 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(10 pts)* Chapter 16: greedy: proving greedy property, activity sel, list merge, Huffman, fractional knapsack
 
+1. *(5 pts)* Assume two **lists** of length `n_1` and `n_2` can be **merged** in `c(n_1+n_2)` operations. What is the minimum number of operations in which lists of the following lengths can be merged? <br/>
+`[ 7, 3, 11, 4, 6, 12, 2 ]`
+
 1. *(8 pts)* Chapter 22: graphs, BFS, DFS, topological sort, connected components
 
 1. *(5 pts)* Chapter 23: minimum spanning tree: Prim, Kruskal
