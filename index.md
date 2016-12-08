@@ -25,9 +25,12 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(10 pts)* Chapter 10,12: linked lists, BSTs, tree ops
 
-1. *(10 pts)* Chapter 18: B-trees, tree ops
+1. *(10 pts)* Draw the **B-tree** of t=3 with the following inserted in order.
+  Draw the tree just before and just after each split.  `AGFBKDHMJESIRX`
 
-1. *(10 pts)* Chapter 15: dynamic prog: proving optimal substructure, rod cut, matrix-chain, LCS, optimal BST
+1. *(10 pts)* Demonstrate the dynamic programming solution for optimal
+   **parenthesisation** to multiply a list of **matrices** with dimensions:
+   (2x5), (5x10), (10x4), (4x5)
 
 1. *(10 pts)* Chapter 16: greedy: proving greedy property, activity sel, list merge, Huffman, fractional knapsack
 
