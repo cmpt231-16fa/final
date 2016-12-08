@@ -37,7 +37,7 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(10 pts)* Demonstrate the dynamic programming solution for optimal
    **parenthesisation** to multiply a list of **matrices** with dimensions:
-   (2x5), (5x10), (10x4), (4x5)
+   (2x5), (5x10), (10x4), (4x5), (5x7)
 
 1. *(10 pts)* Chapter 16: greedy: proving greedy property, activity sel, list merge, Huffman, fractional knapsack
 
