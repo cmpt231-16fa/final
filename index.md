@@ -15,12 +15,13 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 1. *(7 pts)* Given the **recurrence**: \`T(n) = sqrt n T(sqrt n) + n log n\`, prove \`T(n)=n log n\`.
 
 1. *(3 pts)* Solve the **recurrence**: \`T(n) = 3T(n/3) + log n\`
-  <span class="soln"><br/>Master theorem</span>
+  <span class="soln"><br/> Master theorem </span>
 
 1. *(4 pts)* Convert the following array into a **binary max-heap**: <br/>
   `[ 5, 10, 3, 1, 6, 2, 4, 8, 7, 9 ]`
 
 1. *(4 pts)* The **median** of *n* numbers can be found in O(n) time (ch9). What is the **worst-case** complexity of Quicksort if the median is used for the pivot?
+  <span class="soln"><br/> O(n lg n) </span>
 
 1. *(6 pts)* Demonstrate **radix sort** in base *5* on the following: <br/>
   `[ 23, 17, 74, 14, 25, 33, 106, 4, 93 ]`
@@ -29,8 +30,12 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
   `[ 10, 22, 31, 4, 15, 28, 17, 88, 59 ]` into an open-addressed hash table
   of size `m = 11` using division hash and 
   + (a) linear probing
+    <span class="soln"><br/> [22, 88, , , 4, 15, 28, 17, 59, 31, 10] </span>
   + (b) quadratic probing with \`c\_1=1, c\_2=3\`
+    <span class="soln"><br/> [22, , 88, 17, 4, , 28, 59, 15, 31, 10] </span>
   + (c) double hashing with \`h\_1(k)=k and h\_2(k) = 1 + (k mod(m-1))\`
+    <span class="soln"><br/> [22, , 59, 17, 4, 15, 28, 88, , 31, 10] </span>
+
 
 1. *(5 pts)* Demonstrate the following sequence of operations on an empty **binary search tree** (`+X` means insert key `X`, `-X` means delete key `X`). Use **successor** for delete. <br/>
   `+F +T +D +V +K +M +E -F +L +P -T`
