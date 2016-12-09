@@ -6,14 +6,16 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 ---
 
 {% include exam.md %}
+{% include solns.html %}
 
-### Practise Final exam [120 pts]
+### Practise Final exam [120 pts] <a onClick="toggleSolns()">###</a>
 
 1. *(6 pts)* **Prove**: \`n log\_2 (n^2) + n^2 = Omega(n^2)\`
 
 1. *(7 pts)* Given the **recurrence**: \`T(n) = sqrt n T(sqrt n) + n log n\`, prove \`T(n)=n log n\`.
 
 1. *(3 pts)* Solve the **recurrence**: \`T(n) = 3T(n/3) + log n\`
+  <p class="soln">Master theorem</p>
 
 1. *(4 pts)* Convert the following array into a **binary max-heap**: <br/>
   `[ 5, 10, 3, 1, 6, 2, 4, 8, 7, 9 ]`
