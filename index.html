@@ -102,6 +102,23 @@
   <li> <em>(6 pts)</em> Chapter 1-3: Complexity, Θ, Insertion sort</p>
   </li>
 
+  <li> <em>(3 pts)</em> 
+    Say you are sorting an array that is nearly <strong>pre-sorted</strong>:
+    e.g., only <strong>one</strong> element is out of place.
+    <strong>Which</strong> sorting algorithm (of the ones we learned)
+    would be most appropriate?  Why?
+    <p class="soln"> Insertion sort can do this in `O(n)` </p>
+  </li>
+
+  <li> <em>(3 pts)</em> 
+    Assume a database with a table of users, where each user has a
+    unique 32-bit <strong>ID number</strong>.  You wish to sort by ID number.
+    <strong>Which</strong> sorting algorithm (of the ones we learned)
+    would be most appropriate?  Why?
+    <p class="soln"> Radix sort, since the values to be sorted are of
+    a fixed bit length</p>
+  </li>
+
   <li>
     <p><em>(7 pts)</em> Chapter 4-5: Merge sort, induction, master theorem, randomization</p>
   </li>
@@ -181,8 +198,23 @@
     </ol>
   </li>
 
-  <li>
-    <p><em>(8 pts)</em> Chapter 22: graphs, BFS, DFS, topological sort, connected components</p>
+  <li> <em>(8 pts)</em>
+    You are a wedding planner, deciding the guests'
+    <strong>seating arrangement</strong>.
+    For each guest `u`, you have a list of which other guests `v`
+    are <strong>known</strong> by `u`.
+    Assume <strong>commutativity</strong>;
+    i.e., if `u` knows `v`, then `v` also knows `u`.
+    Describe an efficient algorithm to minimise the number of
+    <strong>tables</strong> needed such that each guest in a table
+    <strong>knows</strong> every other guest at the table, either
+    directly or indirectly (via a series of intermediate friends).
+    Analyse the <strong>complexity</strong> of your algorithm.
+    <p class="soln">
+    If guests are vertices, and relationships are edges, then the
+    problem is just the <strong>strongly-connected component</strong>
+    problem, which can be solved by two runs of <strong>DFS</strong>
+    in time `O(V+E)`. </p>
   </li>
 
   <li> <em>(4 pts)</em>
