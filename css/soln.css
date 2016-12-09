@@ -1,0 +1,16 @@
+/**
+ * Hide solutions until JS function shows them
+ */
+
+.soln { 
+  display:none;
+  color: #20c;
+}
+
+.soln:before {
+  content: "Solution: ";
+  font-weight: bold;
+}
+
+p { margin: 1em 0 }
+
