@@ -15,8 +15,6 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(3 pts)* Solve the **recurrence**: \`T(n) = 3T(n/3) + log n\`
 
-1. *(2 pts)* Chapter 6-7: heap sort, priority queue, quick sort
-
 1. *(4 pts)* Convert the following array into a **binary max-heap**: <br/>
   `[ 5, 10, 3, 1, 6, 2, 4, 8, 7, 9 ]`
 
