@@ -117,11 +117,11 @@
   <li> <em>(3 pts)</em>
     Suppose we have a <strong>partitioning</strong> scheme, called
     <code>LopsidedPart</code>, for Quicksort.  <code>LopsidedPart</code>
-    can perform a partition in \`O(n)\` time, but can only guarantee that
+    can perform a partition in `O(n)` time, but can only guarantee that
     the smaller portion is at least <em>1/10-th</em> of the array.
     What is the <strong>worst-case</strong> complexity of Quicksort 
     using <code>LopsidedPart</code>?
-    <p class="soln"> \`O(n log n)\` </p>
+    <p class="soln"> `O(n log n)` </p>
   </li>
 
   <li>
@@ -130,11 +130,11 @@
 
   <li> <em>(4 pts)</em> 
     <strong>Prove</strong> or disprove: <strong>counting sort</strong>
-    on a list of \`n\` integers runs in \`O(n)\` time.
+    on a list of `n` integers runs in `O(n)` time.
     <p class="soln"> FALSE: counting sort's running time depends on the
     space of possible values being sorted.  If this space is all integers
-    \`ZZ\`, then the census array (and hence the running time) can be 
-    arbitrarily large.  E.g., sorting \`[ 0, 2, 1, 10^6 ]\` requires
+    `ZZ`, then the census array (and hence the running time) can be 
+    arbitrarily large.  E.g., sorting `[ 0, 2, 1, 10^6 ]` requires
     a census with at least a million entries.  Any implementation necessarily
     will have a limit on the range of possible values.
   </li>
@@ -145,6 +145,18 @@
 
   <li>
     <p><em>(10 pts)</em> Chapter 10,12: linked lists, BSTs, tree ops</p>
+  </li>
+
+  <li> <em>(6 pts)</em>
+    Is <strong>deletion</strong> in a binary search tree
+    <strong>commutative</strong>?
+    I.e., do <code>Delete(X); Delete(Y)</code> and
+    <code>Delete(Y); Delete(X)</code> always result in the same tree?
+    Prove or give a smallest counterexample.
+    Assume deletion uses successor.
+    <p class="soln"> FALSE: consider the BST with pre-order <code>BADC</code>:
+    <br/> <code>-A -B</code> results in <code>DC</code>, but
+    <br/> <code>-B -A</code> results in <code>CD</code> </p>
   </li>
 
   <li>
