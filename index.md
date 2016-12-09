@@ -6,7 +6,6 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 ---
 
 {% include exam.md %}
-{% include solns.html %}
 
 ### Practise Final exam [120 pts] <a onClick="toggleSolns()">###</a>
 
@@ -15,13 +14,13 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 1. *(7 pts)* Given the **recurrence**: \`T(n) = sqrt n T(sqrt n) + n log n\`, prove \`T(n)=n log n\`.
 
 1. *(3 pts)* Solve the **recurrence**: \`T(n) = 3T(n/3) + log n\`
-  <span class="soln"><br/> Master theorem </span>
+  <br/><span class="soln"> Master theorem </span>
 
 1. *(4 pts)* Convert the following array into a **binary max-heap**: <br/>
   `[ 5, 10, 3, 1, 6, 2, 4, 8, 7, 9 ]`
 
 1. *(4 pts)* The **median** of *n* numbers can be found in O(n) time (ch9). What is the **worst-case** complexity of Quicksort if the median is used for the pivot?
-  <span class="soln"><br/> O(n lg n) </span>
+  <br/><span class="soln"> O(n lg n) </span>
 
 1. *(6 pts)* Demonstrate **radix sort** in base *5* on the following: <br/>
   `[ 23, 17, 74, 14, 25, 33, 106, 4, 93 ]`
@@ -39,6 +38,9 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 1. *(5 pts)* Demonstrate the following sequence of operations on an empty **binary search tree** (`+X` means insert key `X`, `-X` means delete key `X`). Use **successor** for delete. <br/>
   `+F +T +D +V +K +M +E -F +L +P -T`
+  <br/><span class="soln"> preorder before '-F': FDETKMV<br/>
+  Before '-T': KDEMLPV<br/>
+  End: KDEVML</span>
 
 1. *(5 pts)* **Pseudocode** a function to count the **leaves** of a binary tree.
 
