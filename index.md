@@ -40,7 +40,7 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
    **parenthesisation** to multiply a list of **matrices** with dimensions:
    (2x5), (5x10), (10x4), (4x5), (5x7)
 
-1. *(8 pts)* 
+1. *(8 pts)* Demonstrate **fractional knapsack** on items of weight `w = [ 30, 40, 50, 60, 80 ]` and value `v = [ 45, 80, 60, 90, 100 ]`, with total capacity `W = 220`. What is an optimal **0-1** knapsack solution? 
 
 1. *(5 pts)* Assume two **lists** of length \`n\_1\` and \`n\_2\` can be **merged** in \`c(n_1+n_2)\` operations. What is the minimum number of operations in which lists of the following lengths can be merged? <br/>
 `[ 7, 3, 11, 4, 6, 12, 2 ]`
