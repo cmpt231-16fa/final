@@ -9,7 +9,7 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 
 ### Practise Final exam [120 pts]
 
-1. *(6 pts)* Chapter 1-3: Complexity, &Theta;, Insertion sort
+1. *(6 pts)* **Prove**: \`n log\_2 (n^2) + n^2 = Omega(n^2)\`
 
 1. *(7 pts)* Given the **recurrence**: \`T(n) = sqrt n T(sqrt n) + n log n\`, prove \`T(n)=n log n\`.
 
