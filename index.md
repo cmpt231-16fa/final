@@ -25,7 +25,12 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 1. *(6 pts)* Demonstrate **radix sort** in base *5* on the following: <br/>
   `[ 23, 17, 74, 14, 25, 33, 106, 4, 93 ]`
 
-1. *(10 pts)* Chapter 11: hash tables, hash functions, open addressing
+1. *(10 pts)* Demonstrate inserting the keys
+  `[ 10, 22, 31, 4, 15, 28, 17, 88, 59 ]` into an open-addressed hash table
+  of size `m = 11` using division hash and 
+  + (a) linear probing
+  + (b) quadratic probing with \`c\_1=1, c\_2=3\`
+  + (c) double hashing with \`h\_1(k)=k and h\_2(k) = 1 + (k mod(m-1))\`
 
 1. *(5 pts)* Demonstrate the following sequence of operations on an empty **binary search tree** (`+X` means insert key `X`, `-X` means delete key `X`). Use **successor** for delete. <br/>
   `+F +T +D +V +K +M +E -F +L +P -T`
@@ -45,7 +50,8 @@ ext-js: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
 1. *(5 pts)* Assume two **lists** of length \`n\_1\` and \`n\_2\` can be **merged** in \`c(n_1+n_2)\` operations. What is the minimum number of operations in which lists of the following lengths can be merged? <br/>
 `[ 7, 3, 11, 4, 6, 12, 2 ]`
 
-1. *(8 pts)* Chapter 22: graphs, BFS, DFS, topological sort, connected components
+1. *(8 pts)* Demonstrate finding the **strongly-connected components** of the following graph: <br/>
+  ![SCC](img/components.svg)
 
 1. *(5 pts)* **Prove**, or demonstrate a **counterexample**: If *T* is a **minimum spanning tree** in a weighted directed graph *(V, E, w)*, then for any vertices *u*, *v* the path between them in *T* is a **shortest path** in the graph.
 
