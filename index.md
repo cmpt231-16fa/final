@@ -60,6 +60,12 @@ ext-css: "css/soln.css"
    (2x5), (5x10), (10x4), (4x5), (5x7)
 
 1. *(8 pts)* Demonstrate **fractional knapsack** on items of weight `w = [ 30, 40, 50, 60, 80 ]` and value `v = [ 45, 80, 60, 90, 100 ]`, with total capacity `W = 220`. What is an optimal **0-1** knapsack solution? 
+  <span class="soln">
+  Value-to-weight ratios: [ 1.5, 2, 1.2, 1.5, 1.25 ]<br/>
+  Greedy fractional solution: weight = 40 + 30 + 60 + 80 + (1/5)50<br/>
+  Total value: 80 + 45 + 90 + 100 + (1/5)60 = 327.<br/>
+  0-1 solution: everything except item of weight 50: <br/>
+  Total weight 210, total value 315.</span>
 
 1. *(5 pts)* Assume two **lists** of length \`n\_1\` and \`n\_2\` can be **merged** in \`c(n_1+n_2)\` operations. What is the minimum number of operations in which lists of the following lengths can be merged? <br/>
 `[ 7, 3, 11, 4, 6, 12, 2 ]`
