@@ -99,14 +99,11 @@
 	<a onClick="toggleSolns()">###</a> </h3>
 <ol>
 
-  <li> <em>(6 pts)</em> Θ proof
-  </li>
-
   <li> <em>(3 pts)</em> 
     Say you are sorting an array that is nearly <strong>pre-sorted</strong>:
     e.g., only <strong>one</strong> element is out of place.
     <strong>Which</strong> sorting algorithm (of the ones we learned)
-    would be most appropriate?  Why?
+    would be most appropriate?  <strong>Why</strong>?
     <p class="soln"> Insertion sort can do this in `O(n)` </p>
   </li>
 
@@ -114,17 +111,24 @@
     Assume a database with a table of users, where each user has a
     unique 32-bit <strong>ID number</strong>.  You wish to sort by ID number.
     <strong>Which</strong> sorting algorithm (of the ones we learned)
-    would be most appropriate?  Why?
+    would be most appropriate?  <strong>Why</strong>?
     <p class="soln"> Radix sort, since the values to be sorted are of
     a fixed bit length</p>
+  </li>
+
+  <li> <em>(6 pts)</em> Θ proof
   </li>
 
   <li>
     <p><em>(7 pts)</em> Chapter 4-5: Merge sort, induction, master theorem, randomization</p>
   </li>
 
-  <li>
-    <p><em>(3 pts)</em> Solve the <strong>recurrence</strong>: </p>
+  <li> <em>(4 pts)</em> Solve the <strong>recurrence</strong>:
+    `T(n) = 4T(n/2) + n^2 log_2^2 n`
+    <p class="soln">
+    Master method with `a=4, b=2, f(n)=n^2 log_2^2 n`: <br/>
+    Apply polylog extension with `f(n)=n^(log_b a) log^k n` and `k=2`: <br/>
+    Solution is `T(n) = Theta(n^(log_b a) log^(k+1) n) = Theta(n^2 log_2^3 n)`
   </li>
 
   <li>
