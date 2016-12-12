@@ -108,7 +108,7 @@
   </li>
 
   <li> <em>(3 pts)</em> 
-    Assume a database with a table of users, where each user has a
+    Assume a database with a table of millions of users, where each user has a
     unique 32-bit <strong>ID number</strong>.  You wish to sort by ID number.
     <strong>Which</strong> sorting algorithm (of the ones we learned)
     would be most appropriate?  <strong>Why</strong>?
@@ -125,9 +125,10 @@
   <li> <em>(4 pts)</em> Solve the <strong>recurrence</strong>:
     `T(n) = 4T(n/2) + n^2 log_2^2 n`
     <p class="soln">
-    Master method with `a=4, b=2, f(n)=n^2 log_2^2 n`: <br/>
-    Apply polylog extension with `f(n)=n^(log_b a) log^k n` and `k=2`: <br/>
+    Master method with `a=4, b=2, and f(n)=n^2 log_2^2 n`: <br/>
+    Apply polylog extension with `f(n)=n^(log_b a) log^k n and k=2`: <br/>
     Solution is `T(n) = Theta(n^(log_b a) log^(k+1) n) = Theta(n^2 log_2^3 n)`
+    </p>
   </li>
 
   <li>
@@ -140,7 +141,7 @@
     can perform a partition in `O(n)` time, but can only guarantee that
     the smaller portion is at least <em>1/10-th</em> of the array.
     What is the <strong>worst-case</strong> complexity of Quicksort 
-    using <code>LopsidedPart</code>?
+    using <code>LopsidedPart</code>?  Why?
     <p class="soln"> `O(n log n)` </p>
   </li>
 
@@ -156,7 +157,7 @@
     `ZZ`, then the census array (and hence the running time) can be 
     arbitrarily large.  E.g., sorting `[ 0, 2, 1, 10^6 ]` requires
     a census with at least a million entries.  Any implementation necessarily
-    will have a limit on the range of possible values.
+    will have a limit on the range of possible values. </p>
   </li>
 
   <li>
@@ -183,8 +184,11 @@
   <li><em>(10 pts)</em> B-tree
   </li>
 
-  <li>
-    <p><em>(10 pts)</em> dynamic prog: rod cut, matrix-chain, LCS, optimal BST</p>
+  <li><em>(10 pts)</em>
+    Demonstrate a <strong>dynamic programming</strong> solution to find
+    the <strong>longest common subsequence</strong> between
+    `springtime` and `pioneer`
+    <p class="soln"> `pine` </p>
   </li>
 
   <li> [Huffman, team colours]
@@ -196,7 +200,7 @@
     </ol>
   </li>
 
-  <li> <em>(8 pts)</em>
+  <li> <em>(6 pts)</em>
     You are a wedding planner, deciding the guests'
     <strong>seating arrangement</strong>.
     For each guest `u`, you have a list of which other guests `v`
@@ -210,9 +214,9 @@
     Analyse the <strong>complexity</strong> of your algorithm.
     <p class="soln">
     If guests are vertices, and relationships are edges, then the
-    problem is just the <strong>strongly-connected component</strong>
-    problem, which can be solved by two runs of <strong>DFS</strong>
-    in time `O(V+E)`. </p>
+    problem is just the <strong>connected component</strong>
+    problem on an undirected graph, which can be solved by two 
+    runs of <strong>DFS</strong> in time `O(V+E)`. </p>
   </li>
 
   <li> <em>(4 pts)</em>
