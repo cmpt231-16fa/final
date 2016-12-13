@@ -199,15 +199,29 @@
   <li><em>(10 pts)</em>
     Demonstrate a <strong>dynamic programming</strong> solution to find
     the <strong>longest common subsequence</strong> between
-    `springtime` and `pioneer`
-    <p class="soln"> `pine` </p>
+    <code>springtime</code> and <code>pioneer</code>
+    <p class="soln"> <code>pine</code> </p>
   </li>
 
-  <li> [Huffman, team colours]
+  <li> [Huffman, team colours] <br/>
+    <table><tbody><tr>
+    <th> R </th><th> O </th><th> Y </th><th> G </th><th> B </th>
+    <th> I </th><th> V </th><th> W </th><th> K </th></tr><tr>
+    <td>28%</td><td> 6%</td><td> 4%</td><td>16%</td><td>26%</td>
+    <td> 2%</td><td> 8%</td><td> 3%</td><td> 7%</td></tr></tbody></table>
     <ol type="a">
-    <li> <em>(8 pts)</em> Construct a Huffman tree, according to pseudocode
+    <li> <em>(8 pts)</em> Construct a <strong>Huffman tree</strong>
+      to encode these colours efficiently, following the pseudocode in lecture.
     </li>
-    <li> <em>(4 pts)</em> Compression ratio vs fixed-length encoding
+    <li> <em>(4 pts)</em> Derive the <strong>compression ratio</strong>
+      relative to fixed-length encoding.
+      <p class="soln">
+      To encode 100 symbols: 2(26+28) + 3(8+16) + 4(4+6+7) + 5(2+3) = 
+      <strong>273 bits</strong>.<br/>
+      Fixed-length (`|~ log_2 9 ~|` = 4 bits per symbol): 400 bits.<br/>
+      Compression ratio: 400/273 = <strong>1.4652</strong>. <br/>
+      (File size: 273/400 = 68.25%, savings = 1-273/400 = 31.75%)
+      </p>
     </li>
     </ol>
   </li>
