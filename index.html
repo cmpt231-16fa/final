@@ -226,23 +226,30 @@
     </ol>
   </li>
 
-  <li> <em>(6 pts)</em>
+  <li>
     You are a wedding planner, deciding the guests'
     <strong>seating arrangement</strong>.
     For each guest `u`, you have a list of which other guests `v`
     are <strong>known</strong> by `u`.
     Assume <strong>commutativity</strong>;
     i.e., if `u` knows `v`, then `v` also knows `u`.
-    Describe an efficient algorithm to minimise the number of
-    <strong>tables</strong> needed such that each guest in a table
-    <strong>knows</strong> every other guest at the table, either
-    directly or indirectly (via a series of intermediate friends).
-    Analyse the <strong>complexity</strong> of your algorithm.
-    <p class="soln">
-    If guests are vertices, and relationships are edges, then the
-    problem is just the <strong>connected component</strong>
-    problem on an undirected graph, which can be solved by two 
-    runs of <strong>DFS</strong> in time `O(V+E)`. </p>
+    We wish to ensure that each guest in a table knows every other
+    guest at the table, either directly or indirectly
+    (via a series of intermediate friends).
+    <ol type="a">
+    <li> <em>(6 pts)</em> Describe (pseudocode) an efficient 
+      <strong>algorithm</strong> to minimise the number of tables 
+      needed while meeting this constraint.
+      <p class="soln">
+      If guests are vertices, and relationships are edges, then the
+      problem is just the <strong>connected component</strong>
+      problem on an undirected graph, which can be solved by two 
+      runs of <strong>DFS</strong>. </p>
+    </li>
+    <li> <em>(2 pts)</em> Analyse the <strong>complexity</strong>
+      of your algorithm.
+      <p class="soln"> `O(|V| + |E|)` </p> </li>
+    </ol>
   </li>
 
   <li> <em>(4 pts)</em>
