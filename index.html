@@ -90,6 +90,8 @@
 
   </ul></td></tr></tbody></table><ul>
 
+  <li>Where there is a choice, consider vertices in **alphabetical** order,
+  and edges in **lexicographic** order of endpoints.
   <li>If you feel a question is <strong>ambiguous</strong>, write on your exam sheet your interpretation of the question, and answer accordingly.</li>
   <li>Please label/<strong>number</strong> your pages clearly and <strong>staple</strong> them in order when handing in.</li>
 
@@ -268,10 +270,26 @@ double with 5-(k mod 5)
   <li><em>(10 pts)</em> Prim
   </li>
 
-  <li><em>(8 pts)</em> Bellman-Ford with neg loop of 4 nodes
+  <li><em>(10 pts)</em> Demonstrate <strong>Bellman-Ford</strong>
+    for finding shortest paths from the source `a` in the following graph.
+    <br><img src="img/bellman-ford.svg" style="maxwidth:90%; height:20em"/>
+    <ul class="soln">
+    <li>Pass 1: a:0, b:5, c:4, d:7, e:5, f:8</li>
+    <li>Pass 2: a:0, b:3, c:4, d:7, e:5, f:8</li>
+    <li>Pass 3: a:0, b:3, c:4, d:5, e:4, f:6</li>
+    <li>Pass 4: a:0, b:3, c:3, d:5, e:4, f:6</li>
+    <li>Pass 5: a:0, b:2, c:3, d:5, e:4, f:6</li>
+    <li>Pass 6: a:0, b:2, c:3, d:4, e:3, f:5</li>
+    </ul>
+    <p class="soln">
+    Since the shortest-path estimates keep changing even after
+    `|V|-1 = 5` iterations, we observe there is a 
+    negative-weight loop (b, d, f, e, c) of net weight -1.
+    </p>
   </li>
 
-  <li> <em>(10 pts)</em> Floyd-Warshall dyn prog
+  <li> <em>(10 pts)</em> Demonstrate <strong>Floyd-Warshall</strong>
+	  for finding all-pairs shortest paths.
   </li>
 
 </ol>
