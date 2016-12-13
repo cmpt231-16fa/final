@@ -116,7 +116,17 @@
     a fixed bit length</p>
   </li>
 
-  <li> <em>(6 pts)</em> Θ proof
+  <li> <em>(6 pts)</em> <strong> Prove </strong> from definition:
+    `10 n^2 log n + O(n log^2 n) = O(n^2 log n)`
+    <p class="soln">
+    Let `f(n) in O(n log^2 n)`. So `exists c_1, n_1 > 0`
+    such that `f(n) <= c_1 n log^2 n, forall n > n_1`. <br/>
+    Let `c_2 = 10 + c_1`. <br/>
+    Then `10 n^2 log n + f(n)`
+    `<= 10 n^2 log n + c_1 n log^2 n` (property of `f`)<br/>
+    `<= 10 n^2 log n + c_1 n^2 log n` (since `log n < n`)<br/>
+    `= (10 + c_1) n^2 log n` `= c_2 n^2 log n, forall n > n_1` 
+    </p>
   </li>
 
   <li> <em>(6 pts)</em> 
@@ -274,7 +284,4 @@ if (typeof jQuery == 'undefined') {
 </script>
 
 <script src="https://cmpt231-16fa.github.io/final/js/bootstrap.min.js"></script>
-<script src="https://cmpt231-16fa.github.io/final/js/main.js"></script>
-<script src="https://cmpt231-16fa.github.io/final/js/soln.js"></script>
-
-</body></html>
+<sc
