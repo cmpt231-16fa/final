@@ -129,13 +129,13 @@ ol.main > li { padding: 1em 0 0 0 }
   <li> <em>(6 pts)</em> <strong> Prove </strong> from definition:
     `10 n^2 log n + O(n log^2 n) = O(n^2 log n)`
     <p class="soln">
-    Let `f(n) in O(n log^2 n)`. So `exists c_1, n_1 > 0`
-    such that `f(n) <= c_1 n log^2 n, forall n > n_1`. <br/>
-    Let `c_2 = 10 + c_1`. <br/>
-    Then `10 n^2 log n + f(n)`
-    `<= 10 n^2 log n + c_1 n log^2 n` (property of `f`)<br/>
-    `<= 10 n^2 log n + c_1 n^2 log n` (since `log n < n`)<br/>
-    `= (10 + c_1) n^2 log n` `= c_2 n^2 log n, forall n > n_1` 
+    Let `f(n) in O(n log^2 n)`. So `exists c_0, n_0 > 0`
+    such that `f(n) <= c_0 n log^2 n, forall n > n_0`. <br/>
+    Let `c_1 = 10 + c_0`. <br/>
+    Then for all `n > n_0`, we have that `10 n^2 log n + f(n)`
+    `<= 10 n^2 log n + c_0 n log^2 n` (property of `f`)<br/>
+    `<= 10 n^2 log n + c_0 n^2 log n` (since `log n < n`)<br/>
+    `= (10 + c_0) n^2 log n` `= c_1 n^2 log n, forall n > n_0` 
     </p>
   </li>
 
