@@ -166,6 +166,9 @@ ol.main > li { padding: 1em 0 0 0 }
   <li> <em>(8 pts)</em> Demonstrate <strong>heap sort</strong>
     on the following. How many <strong>swaps</strong>?
     <code>[ F, L, B, C, M, X, D, V, T, S ]</code>
+    <p class="soln"> 28 swaps total. <br/>
+    After the initial heapify: [ X V F T S B D C L M ]</p>
+  </li>
 
   <li> <em>(4 pts)</em>
     Suppose we have a <strong>partitioning</strong> scheme, called
@@ -211,21 +214,58 @@ ol.main > li { padding: 1em 0 0 0 }
 
   <li> Demonstrate inserting the following in order.
 	  If insertion fails, just note it. <br/>
-    <code>[ 10, 15, 12, 14, 1, 13, 4, 17, 8, 9 ]</code>
+    <code>[ 10, 15, 12, 14, 1, 13, 4, 23, 7, 9 ]</code>
     <ol type="a">
     <li> <em>(3 pts)</em> A hash table of size `m=11` with 
-      division hash and <strong>chaining</strong></li>
+      division hash and <strong>chaining</strong>
+      <p class="soln"> <table><tbody><tr>
+      <th> 0</th><th> 1</th><th> 2</th><th> 3</th><th> 4</th><th> 5</th>
+      <th> 6</th><th> 7</th><th> 8</th><th> 9</th><th>10</th></tr><tr>
+      <td> </td><td>12, 1, 23</td><td>13</td><td>14</td><td>15,4</td><td> </td>
+      <td> </td><td>7</td><td> </td><td>9</td><td>10</td>
+      </tr></tbody></table></p>
+    </li>
     <li> <em>(3 pts)</em> A hash table of size `m=11` with 
-      division hash and <strong>linear probing</strong></li>
+      division hash and <strong>linear probing</strong>
+      <p class="soln"> <table><tbody><tr>
+      <th> 0</th><th> 1</th><th> 2</th><th> 3</th><th> 4</th><th> 5</th>
+      <th> 6</th><th> 7</th><th> 8</th><th> 9</th><th>10</th></tr><tr>
+      <td>  </td><td>12</td><td> 1</td><td>14</td><td>15</td><td>13</td>
+      <td> 4</td><td>23</td><td> 7</td><td> 9</td><td>10</td>
+      </tr></tbody></table></p>
+    </li>
     <li> <em>(3 pts)</em> A hash table of size `m=11` with 
-      division hash and <strong>quadratic probing</strong>
-      (`c_1=1, c_2=1`)</li>
+      division hash and <strong>quadratic probing</strong>:
+      `c_1=0, c_2=1`
+      <p class="soln"> <table><tbody><tr>
+      <th> 0</th><th> 1</th><th> 2</th><th> 3</th><th> 4</th><th> 5</th>
+      <th> 6</th><th> 7</th><th> 8</th><th> 9</th><th>10</th></tr><tr>
+      <td>  </td><td>12</td><td> 1</td><td>14</td><td>15</td><td>23</td>
+      <td>13</td><td> 4</td><td> 7</td><td> 9</td><td>10</td>
+      </tr></tbody></table></p>
+    </li>
     <li> <em>(4 pts)</em> Same, with <strong>double-hashing</strong>:
-      `h_1` = division hash, and `h_2(k) = 5-(k mod 5)`</li>
-    <li> <em>(3 pts)</em> A <strong>binary search tree</strong></li>
+      `h_1` = division hash, and `h_2(k) = 5-(k mod 5)`
+      <p class="soln"> <table><tbody><tr>
+      <th> 0</th><th> 1</th><th> 2</th><th> 3</th><th> 4</th><th> 5</th>
+      <th> 6</th><th> 7</th><th> 8</th><th> 9</th><th>10</th></tr><tr>
+      <td>  </td><td>12</td><td>13</td><td>14</td><td>15</td><td> 1</td>
+      <td> 4</td><td>23</td><td> 7</td><td> 9</td><td>10</td>
+      </tr></tbody></table></p>
+    </li>
+    <li> <em>(3 pts)</em> A <strong>binary search tree</strong>
+      <p class="soln"> The tree is quite unbalanced; preorder:
+      <code>[ 10 1 4 7 9 15 12 14 13 23 ]</code></p>
+    </li>
     <li> <em>(6 pts)</em> A <strong>B-tree</strong> with `t=2`
-      (using pre-emptive split/merge, as in lecture)</li>
-    <li> <em>(2 pts)</em> Now, <strong>delete</strong> 13 from the B-tree.</li>
+      (using pre-emptive split/merge, as in lecture)
+      <p class="soln"> By level:
+      (12) / (4) (14) / (1) (7 9 10) (13) (15 23)</p>
+    </li>
+    <li> <em>(2 pts)</em> Now, <strong>delete</strong> 13 from the B-tree.
+      <p class="soln"> By level:
+      (4 12 15) / (1) (7 9 10) (14) (23)</p>
+    </li>
     </ol>
   </li>
 
@@ -243,7 +283,16 @@ ol.main > li { padding: 1em 0 0 0 }
     <li> <em>(6 pts)</em> Construct a <strong>Huffman tree</strong>,
       following the pseudocode in lecture.
     </li>
-    <li> <em>(3 pts)</em> Derive the <strong>compression ratio</strong>
+    <li> <em>(2 pts)</em> <strong>Encode</strong> each colour in 
+      binary using your Huffman tree.
+      <p class="soln"><table><tbody><tr>
+      <th> R </th><th> O </th><th> Y </th><th> G </th><th> B </th>
+      <th> I </th><th> V </th><th> W </th><th> K </th></tr><tr>
+      <td> 10</td><td>1100</td><td>0010</td><td>111</td><td>01</td>
+      <td>00110</td><td>000</td><td>00111</td><td>1101</td>
+      </tr></tbody></table></p>
+    </li>
+    <li> <em>(2 pts)</em> Derive the <strong>compression ratio</strong>
       relative to fixed-length encoding.
       <p class="soln">
       To encode 100 symbols: 2(26+28) + 3(8+16) + 4(4+6+7) + 5(2+3) = 
@@ -303,7 +352,7 @@ ol.main > li { padding: 1em 0 0 0 }
     </p>
   </li>
 
-  <li> <em>(10 pts)</em> 
+  <li> <em>(9 pts)</em> 
     The <strong>right-hand</strong> graph above is the same except
     `w(c,b)=1`.  Demonstrate <strong>Floyd-Warshall</strong> for 
     all-pairs shortest paths on the right-hand graph.
