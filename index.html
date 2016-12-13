@@ -300,7 +300,7 @@ ol.main > li { padding: 1em 0 0 0 }
       <th> I </th><th> V </th><th> W </th><th> K </th></tr><tr>
       <td> 10</td><td>1100</td><td>0010</td><td>111</td><td>01</td>
       <td>00110</td><td>000</td><td>00111</td><td>1101</td>
-      </tr></tbody></table></p>
+      </tr></tbody></table>
     </li>
 
     <li> <em>(2 pts)</em> Derive the <strong>compression ratio</strong>
@@ -352,14 +352,23 @@ ol.main > li { padding: 1em 0 0 0 }
     the source `a`:
     <br><img src="img/bellman-ford.svg" style="width:45%"/>
     <img src="img/floyd-warshall.svg" style="width:45%"/>
-    <ul class="soln">
-    <li>Pass 1: a:0, b:5, c:4, d:7, e:5, f:8</li>
-    <li>Pass 2: a:0, b:3, c:4, d:7, e:5, f:8</li>
-    <li>Pass 3: a:0, b:3, c:4, d:5, e:4, f:6</li>
-    <li>Pass 4: a:0, b:3, c:3, d:5, e:4, f:6</li>
-    <li>Pass 5: a:0, b:2, c:3, d:5, e:4, f:6</li>
-    <li>Pass 6: a:0, b:2, c:3, d:4, e:3, f:5</li>
-    </ul>
+    <p class="soln"> The prescribed sequence of edges is
+    (a,b), (a,e), (b,d), (c,b), (c,e), (d,c), (d,f), (e,c), (e,d), (f,e)</p>
+    <table class="soln"><tbody><tr><th>Pass:</th>
+      <th>a</th><th>b</th><th>c</th><th>d</th><th>e</th><th>f</th>
+    </tr><tr><th>1:</th>
+      <td>0</td><td>5</td><td>4</td><td>7</td><td>5</td><td>8</td>
+    </tr><tr><th>2:</th>
+      <td>0</td><td>3</td><td>4</td><td>7</td><td>5</td><td>8</td>
+    </tr><tr><th>3:</th>
+      <td>0</td><td>3</td><td>4</td><td>5</td><td>4</td><td>6</td>
+    </tr><tr><th>4:</th>
+      <td>0</td><td>3</td><td>3</td><td>5</td><td>4</td><td>6</td>
+    </tr><tr><th>5:</th>
+      <td>0</td><td>2</td><td>3</td><td>5</td><td>4</td><td>6</td>
+    </tr><tr><th>6:</th>
+      <td>0</td><td>2</td><td>3</td><td>4</td><td>3</td><td>5</td>
+    </tr></tbody></table>
     <p class="soln">
     Since the shortest-path estimates keep changing even after
     `|V|-1 = 5` iterations, we observe there is a 
