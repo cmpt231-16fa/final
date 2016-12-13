@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Final Exam: CMPT231</title>
+  <meta name="author" content="Sean Ho" />
+  <meta name="description" content="">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cmpt231-16fa.github.io/final/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cmpt231-16fa.github.io/final/css/main.css" />
+  <link rel="stylesheet" href="https://cmpt231-16fa.github.io/final/css/soln.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+</head><body>
+
+<style type="text/css"><!--
+ol.main > li { padding: 1em 0 0 0 }
+--></style>
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://cmpt231-16fa.github.io/final">Final CMPT231 16FA</a>
+    </div>
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+          <li>
+<a href="https://courses.mytwu.ca/course/view.php?id=33225">myCourses</a>
+          </li>
+          <li>
+<a href="https://cmpt231-16fa.github.io/">CMPT231</a>
+          </li>
+      </ul>
+    </div>
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="https://cmpt231-16fa.github.io/final ">
+	      <img class="avatar-img" src="https://cmpt231-16fa.github.io/final/img/TreeNetwork.svg" />
+		</a>
+	  </div>
+	</div>
+  </div>
+</nav>  
+
+<header class="header-section ">
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Final Exam: CMPT231</h1>
+            <hr class="small">
+            <span class="page-subheading">Tue 13 Dec 2016 14:00-16:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+<h3 id="policies">Exam Policies</h3>
+
+  <table><tbody><tr><td><ul>
+
+  <li><strong>Allowed</strong>:
+    <ul>
+      <li>Paper copy of <strong>textbook</strong></li>
+      <li>Paper <strong>notes</strong>, printed or handwritten</li>
+      <li>Bring <strong>blank</strong> 8.5x11” paper</li>
+    </ul>
+  </li>
+
+  </ul></td><td><ul>
+
+  <li><strong>Not</strong> allowed:
+    <ul>
+      <li>Use of <strong>electronics</strong>, computers, etc.</li>
+      <li>Use of mobile <strong>phone</strong> (in pocket/bag)</li>
+      <li><strong>Communication</strong> with anyone except invigilator</li>
+    </ul>
+  </li>
+
+  </ul></td></tr></tbody></table><ul>
+
+  <li>Consider vertices in
+    <strong>alphabetical</strong> order, and edges in 
+    <strong>lexicographic</strong> order of endpoints.</li>
+  <li>Please <strong>show</strong> as much work as you can.</li>
+  <li>If you feel a question is <strong>ambiguous</strong>, 
+    explain your interpretation and answer accordingly.</li>
+  <li>Please label/<strong>number</strong> your pages clearly 
+    and <strong>staple</strong> them in order when handing in.</li>
+
+  </ul>
+
+<h3 id="final-exam-120-pts">Final exam [110 pts; counted out of 100]
+	<a onClick="toggleSolns()">###</a> </h3>
+<ol class="main">
+
+  <li> <em>(3 pts)</em> 
+    Say you are sorting an array that is nearly <strong>pre-sorted</strong>:
+    e.g., only <strong>one</strong> element is out of place.
+    <strong>Which</strong> sorting algorithm (of the ones we learned)
+    would be most appropriate?  <strong>Why</strong>?
+    <p class="soln"> Insertion sort can do this in `O(n)` </p>
+  </li>
+
+  <li> <em>(3 pts)</em> 
+    In a table of millions of users, each user has a
+    unique 32-bit <strong>ID number</strong>.  You wish to sort by ID number.
+    <strong>Which</strong> sorting algorithm (of the ones we learned)
+    would be most appropriate?  <strong>Why</strong>?
+    <p class="soln"> Radix sort, since the values to be sorted are of
+    a fixed bit length</p>
+  </li>
+
+  <li> <em>(6 pts)</em> <strong> Prove </strong> from definition:
+    `10 n^2 log n + O(n log^2 n) = O(n^2 log n)`
+    <p class="soln">
+    Let `f(n) in O(n log^2 n)`. So `exists c_0, n_0 > 0`
+    such that `f(n) <= c_0 n log^2 n, forall n > n_0`. <br/>
+    Let `c_1 = 10 + c_0`. <br/>
+    Then for all `n > n_0`, we have that `10 n^2 log n + f(n)`
+    `<= 10 n^2 log n + c_0 n log^2 n` (property of `f`)<br/>
+    `<= 10 n^2 log n + c_0 n^2 log n` (since `log n < n`)<br/>
+    `= (10 + c_0) n^2 log n` `= c_1 n^2 log n, forall n > n_0` 
+    </p>
+  </li>
+
+  <li> <em>(6 pts)</em> 
+    Let `F_0 = F_1 = 1, and F_n = F_(n-2) + F_(n-1), forall n > 1`. <br/>
+    Let `phi = (1+sqrt 5)/2 ~~ 1.62`, such that `phi^2 = phi + 1`.
+    <strong>Prove by induction</strong>: `F_n <= phi^n`
+    <p class="soln">
+    Base case: `F_0 = 1 = phi^0`,
+       and `F_1 = 1 <= 1.62 ~~ phi^1`. <br/>
+    Inductive step: `F_n = F_(n-2) + F_(n-1)` (the given recurrence) <br/>
+    `<= phi^(n-2) + phi^(n-1)` (by inductive hypothesis) <br/>
+    ` = phi^(n-2)(1+phi)` (factoring out `phi^(n-2)`) <br/>
+    ` = phi^(n-2) phi^2` (property of `phi`) <br/>
+    ` = phi^n`.
+    </p>
+  </li>
+
+  <li> <em>(4 pts)</em> Solve the <strong>recurrence</strong>:
+    `T(n) = 4T(n/2) + n^2 log_2^2 n`
+    <p class="soln">
+    Master method with `a=4, b=2, and f(n)=n^2 log_2^2 n`: <br/>
+    Apply polylog extension with `f(n)=n^(log_b a) log^k n and k=2`: <br/>
+    Solution is `T(n) = Theta(n^(log_b a) log^(k+1) n) = Theta(n^2 log_2^3 n)`
+    </p>
+  </li>
+
+  <li> <em>(8 pts)</em> Demonstrate <strong>heap sort</strong>
+    on the following. How many <strong>swaps</strong>?
+    <code>[ F, L, B, C, M, X, D, V, T, S ]</code>
+    <p class="soln"> 28 swaps total. <br/>
+    After the initial heapify: [ X V F T S B D C L M ]</p>
+  </li>
+
+  <li> <em>(4 pts)</em>
+    Suppose we have a <strong>partitioning</strong> scheme, called
+    <code>LopsidedPart</code>, for Quicksort.  <code>LopsidedPart</code>
+    can perform a partition in `O(n)` time, but the larger portion
+    can be up to <em>99%</em> of the array.
+    What is the <strong>worst-case</strong> complexity of Quicksort 
+    using <code>LopsidedPart</code>?  Why?
+    <p class="soln"> `O(n log n)` </p>
+  </li>
+
+  <li> <em>(4 pts)</em> 
+    <strong>Prove</strong> or disprove: <strong>counting sort</strong>
+    on a list of `n` integers runs in `O(n)` time.
+    <p class="soln"> FALSE: counting sort's running time depends on the
+    space of possible values being sorted.  If this space is all integers
+    `ZZ`, then the census array (and hence the running time) can be 
+    arbitrarily large.  E.g., sorting `[ 0, 2, 1, 10^6 ]` requires
+    a census with at least a million entries.  Any implementation necessarily
+    will have a limit on the range of possible values. </p>
+  </li>
+
+  <li> <em>(6 pts)</em>
+    Is <strong>deletion</strong> in a binary search tree
+    <strong>commutative</strong>?
+    I.e., do "del(x), del(y)" and "del(y), del(x)"
+    always yield the same tree?
+    <strong>Prove</strong> or give a smallest counterexample.
+    Assume deletion uses successor.  Assume unique keys.
+    <p class="soln">
+    FALSE: consider the BST with pre-order <code>BADC</code>:
+    <br/> <code>-A -B</code> results in <code>DC</code>, but
+    <br/> <code>-B -A</code> results in <code>CD</code> </p>
+  </li>
+
+  <li> <em>(4 pts)</em>
+    Recall that <strong>depth-first search</strong> is `Theta(V+E)`
+    when using adjacency lists. <br/>
+    What is its running time if an
+    <strong>adjacency matrix</strong> is used instead?
+    <p class="soln"> `Theta(V^2)`, the size of the adjacency matrix</p>
+  </li>
+
+  <li> Demonstrate inserting the following in order.
+	  If insertion fails, just note it. <br/>
+    <code>[ 10, 15, 12, 14, 1, 13, 4, 23, 7, 9 ]</code>
+    <ol type="a">
+
+    <li> <em>(3 pts)</em> A hash table of size `m=11` with 
+      division hash and <strong>chaining</strong>
+      <table class="soln"><tbody><tr>
+      <th> 0</th><th> 1</th><th> 2</th><th> 3</th><th> 4</th><th> 5</th>
+      <th> 6</th><th> 7</th><th> 8</th><th> 9</th><th>10</th></tr><tr>
+      <td> </td><td>12, 1, 23</td><td>13</td><td>14</td><td>15,4</td><td> </td>
+      <td> </td><td>7</td><td> </td><td>9</td><td>10</td>
+      </tr></tbody></table>
+    </li>
+
+    <li> <em>(3 pts)</em> A hash table of size `m=11` with 
+      division hash and <strong>linear probing</strong>
+      <table class="soln"><tbody><tr>
+      <th> 0</th><th> 1</th><th> 2</th><th> 3</th><th> 4</th><th> 5</th>
+      <th> 6</th><th> 7</th><th> 8</th><th> 9</th><th>10</th></tr><tr>
+      <td>  </td><td>12</td><td> 1</td><td>14</td><td>15</td><td>13</td>
+      <td> 4</td><td>23</td><td> 7</td><td> 9</td><td>10</td>
+      </tr></tbody></table>
+    </li>
+
+    <li> <em>(3 pts)</em> A hash table of size `m=11` with 
+      division hash and <strong>quadratic probing</strong>:
+      `c_1=0, c_2=1`
+      <p class="soln"> The probe sequence does not provide full coverage; there is no spot for 23.</p>
+      <table class="soln"><tbody><tr>
+      <th> 0</th><th> 1</th><th> 2</th><th> 3</th><th> 4</th><th> 5</th>
+      <th> 6</th><th> 7</th><th> 8</th><th> 9</th><th>10</th></tr><tr>
+      <td>  </td><td>12</td><td> 1</td><td>14</td><td>15</td><td> 4</td>
+      <td>13</td><td> 7</td><td>  </td><td> 9</td><td>10</td>
+      </tr></tbody></table>
+    </li>
+
+    <li> <em>(4 pts)</em> Same, with <strong>double-hashing</strong>:
+      `h_1` = division hash, and `h_2(k) = 5-(k mod 5)`
+      <table class="soln"><tbody><tr>
+      <th> 0</th><th> 1</th><th> 2</th><th> 3</th><th> 4</th><th> 5</th>
+      <th> 6</th><th> 7</th><th> 8</th><th> 9</th><th>10</th></tr><tr>
+      <td>  </td><td>12</td><td>13</td><td>14</td><td>15</td><td> 1</td>
+      <td> 4</td><td>23</td><td> 7</td><td> 9</td><td>10</td>
+      </tr></tbody></table>
+    </li>
+
+    <li> <em>(3 pts)</em> A <strong>binary search tree</strong>
+      <p class="soln"> The tree is quite unbalanced; preorder:
+      <code>[ 10 1 4 7 9 15 12 14 13 23 ]</code></p>
+    </li>
+
+    <li> <em>(6 pts)</em> A <strong>B-tree</strong> with `t=2`
+      (using pre-emptive split/merge, as in lecture)
+      <p class="soln"> By level:
+      (12) / (4) (14) / (1) (7 9 10) (13) (15 23)<br/>
+      <img src="img/btree.png" style="max-width: 80%"/><br/>
+      (<a href="https://www.cs.usfca.edu/~galles/visualization/BTree.html">
+      B-tree demo</a>, max degree = 4, pre-emptive split/merge)
+      </p>
+    </li>
+
+    <li> <em>(2 pts)</em> Now, <strong>delete</strong> 13 from the B-tree.
+      <p class="soln"> By level:
+      (4 12 15) / (1) (7 9 10) (14) (23)<br/>
+      <img src="img/btree-del.png" style="max-width: 80%"/>
+      </p>
+    </li>
+
+    </ol>
+  </li>
+
+  <li> You are managing a large youth-sports database; each participant
+    is assigned one of nine <strong>team colours</strong>.
+    The list of colour assignments is very long, and you would like to
+    <strong>compress</strong> it.  The colours and relative frequencies
+    are given below: <br/>
+    <table><tbody><tr>
+    <th> R </th><th> O </th><th> Y </th><th> G </th><th> B </th>
+    <th> I </th><th> V </th><th> W </th><th> K </th></tr><tr>
+    <td>28%</td><td> 6%</td><td> 4%</td><td>16%</td><td>26%</td>
+    <td> 2%</td><td> 8%</td><td> 3%</td><td> 7%</td></tr></tbody></table>
+    <ol type="a">
+
+    <li> <em>(6 pts)</em> Construct a <strong>Huffman tree</strong>,
+      following the pseudocode in lecture.
+    </li>
+
+    <li> <em>(2 pts)</em> <strong>Encode</strong> each colour in 
+      binary using your Huffman tree.
+      <table class="soln"><tbody><tr>
+      <th> R </th><th> O </th><th> Y </th><th> G </th><th> B </th>
+      <th> I </th><th> V </th><th> W </th><th> K </th></tr><tr>
+      <td> 10</td><td>1100</td><td>0010</td><td>111</td><td>01</td>
+      <td>00110</td><td>000</td><td>00111</td><td>1101</td>
+      </tr></tbody></table>
+    </li>
+
+    <li> <em>(2 pts)</em> Derive the <strong>compression ratio</strong>
+      relative to fixed-length encoding.
+      <p class="soln">
+      To encode 100 symbols: 2(26+28) + 3(8+16) + 4(4+6+7) + 5(2+3) = 
+      <strong>273 bits</strong>.<br/>
+      Fixed-length (`|~ log_2 9 ~|` = 4 bits per symbol): 400 bits.<br/>
+      Compression ratio: 400/273 = <strong>1.4652</strong>. <br/>
+      (File size: 273/400 = 68.25%, savings = 1-273/400 = 31.75%)
+      </p>
+    </li>
+
+    </ol>
+  </li>
+
+  <li>
+    You are a wedding planner, deciding the guests'
+    <strong>seating arrangement</strong>.
+    For each guest `u`, you have a list of which other guests `v`
+    are <strong>known</strong> by `u`.
+    Assume <strong>commutativity</strong>;
+    i.e., if `u` knows `v`, then `v` also knows `u`.
+    We wish to <strong>minimise</strong> the number of tables 
+    while ensuring that each guest knows <strong>every</strong>
+    other guest at his/her table, either directly or indirectly
+    (via a series of intermediate friends).
+    <ol type="a">
+
+      <li> <em>(5 pts)</em> <strong>Describe</strong> an efficient 
+      algorithm to solve this.
+      <p class="soln">
+      If guests are vertices, and relationships are edges, then the
+      problem is just the <strong>connected component</strong>
+      problem on an undirected graph, which can be solved by two 
+      runs of <strong>DFS</strong>. </p>
+    </li>
+
+    <li> <em>(2 pts)</em> Analyse the <strong>complexity</strong>
+      of your algorithm.
+      <p class="soln"> `O(|V| + |E|)` </p> </li>
+
+    </ol>
+  </li>
+
+  <li><em>(9 pts)</em>
+    In the <strong>left-hand</strong> graph below, demonstrate
+    <strong>Bellman-Ford</strong> for shortest paths from
+    the source `a`.  What is a shortest path from `a` to `f`?
+    <br><img src="img/bellman-ford.svg" style="width:45%"/>
+    <img src="img/floyd-warshall.svg" style="width:45%"/>
+    <p class="soln"> The prescribed sequence of edges is
+    (a,b), (a,e), (b,d), (c,b), (c,e), (d,c), (d,f), (e,c), (e,d), (f,e)</p>
+    <table class="soln"><tbody><tr><th>Pass:</th>
+      <th>a</th><th>b</th><th>c</th><th>d</th><th>e</th><th>f</th>
+    </tr><tr><th>1:</th>
+      <td>0</td><td>5</td><td>4</td><td>7</td><td>5</td><td>8</td>
+    </tr><tr><th>2:</th>
+      <td>0</td><td>3</td><td>4</td><td>7</td><td>5</td><td>8</td>
+    </tr><tr><th>3:</th>
+      <td>0</td><td>3</td><td>4</td><td>5</td><td>4</td><td>6</td>
+    </tr><tr><th>4:</th>
+      <td>0</td><td>3</td><td>3</td><td>5</td><td>4</td><td>6</td>
+    </tr><tr><th>5:</th>
+      <td>0</td><td>2</td><td>3</td><td>5</td><td>4</td><td>6</td>
+    </tr><tr><th>6:</th>
+      <td>0</td><td>2</td><td>3</td><td>4</td><td>3</td><td>5</td>
+    </tr></tbody></table>
+    <p class="soln">
+    Since the shortest-path estimates keep changing even after
+    `|V|-1 = 5` iterations, we observe there is a 
+    negative-weight loop (b, d, f, e, c) of net weight -1.
+    </p>
+  </li>
+
+  <li> <em>(9 pts)</em> 
+    The <strong>right-hand</strong> graph above is the same except
+    `w(c,b)=1`.  Demonstrate <strong>Floyd-Warshall</strong> for 
+    all-pairs shortest paths on the right-hand graph.
+    Show the `D` matrix after each iteration `k`.
+    <ul class="soln">
+    <li>Original adjacency matrix: <br/>
+    `((0, 5, oo, oo, 5, oo), (oo, 0, oo, 2, oo, oo), (oo, 1, 0, oo, 1, oo),
+    (oo, oo, -1, 0, oo, 1), (oo, oo, -1, 2, 0, oo), (oo, oo, oo, oo, -2, 0))`
+    </li>
+    <li>At k=2, by routing through `{a,b}`, we can get from
+      `a` to `d` in weight 7, and from `c` to `d` in weight 3: <br/>
+    `((0, 5, oo, 7, 5, oo), (oo, 0, oo, 2, oo, oo), (oo, 1, 0, 3, 1, oo),
+    (oo, oo, -1, 0, oo, 1), (oo, oo, -1, 2, 0, oo), (oo, oo, oo, oo, -2, 0))`
+    </li>
+    <li>At k=3, via `{a,b,c}`: change `d_(db)=0, d_(eb)=0`: <br/>
+    `((0, 5, oo, 7, 5, oo), (oo, 0, oo, 2, oo, oo), (oo, 1, 0, 3, 1, oo),
+    (oo, 0, -1, 0, oo, 1), (oo, 0, -1, 2, 0, oo), (oo, oo, oo, oo, -2, 0))`
+    </li>
+    <li>At k=4: `d_(ac)=6, d_(af)=8, d_(bc)=1,
+      d_(be)=2, d_(bf)=3, d_(cf)=4, d_(ef)=3`: <br/>
+    `((0, 5, 6, 7, 5, 8), (oo, 0, 1, 2, 2, 3), (oo, 1, 0, 3, 1, 4),
+    (oo, 0, -1, 0, oo, 1), (oo, 0, -1, 2, 0, 3), (oo, oo, oo, oo, -2, 0))`
+    </li>
+    <li>At k=5: `d_(ac)=4, d_(db)=-1, d_(dc)=-2,
+      d_(fb)=-2, d_(fc)=-3, d_(fd)=0` <br/>
+    `((0, 5, 4, 7, 5, 8), (oo, 0, 1, 2, 2, 3), (oo, 1, 0, 3, 1, 4),
+    (oo, -1, -2, 0, oo, 1), (oo, 0, -1, 2, 0, 3), (oo, -2, -3, 0, -2, 0))`
+    </li>
+    <li>At k=6: `d_(be)=1, d_(de)=-1`: <br/>
+    `((0, 5, 4, 7, 5, 8), (oo, 0, 1, 2, 1, 3), (oo, 1, 0, 3, 1, 4),
+    (oo, -1, -2, 0, -1, 1), (oo, 0, -1, 2, 0, 3), (oo, -2, -3, 0, -2, 0))`
+    </li>
+    </ul>
+  </li>
+
+  <li> <em>(3 pts)</em> 
+    Which of the many algorithms we learned in this course is your 
+    <strong>favourite</strong>, or sticks in your mind the most?
+    <strong>Why</strong>?
+  </li>
+
+</ol>
+
+</div></div></div>
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"></script>
+
+<script>
+if (typeof jQuery == 'undefined') {
+  document.write('<script src="https://cmpt231-16fa.github.io/final/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+}
+</script>
+
+<script src="https://cmpt231-16fa.github.io/final/js/bootstrap.min.js"></script>
+<script src="https://cmpt231-16fa.github.io/final/js/main.js"></script>
+<script src="https://cmpt231-16fa.github.io/final/js/soln.js"></script>
+
+</body></html>
