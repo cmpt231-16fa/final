@@ -94,7 +94,7 @@ ol.main > li { padding: 1em 0 0 0 }
 
   </ul></td></tr></tbody></table><ul>
 
-  <li>Where there is a choice, consider vertices in
+  <li>Consider vertices in
     <strong>alphabetical</strong> order, and edges in 
     <strong>lexicographic</strong> order of endpoints.</li>
   <li>Please <strong>show</strong> as much work as you can.</li>
@@ -118,7 +118,7 @@ ol.main > li { padding: 1em 0 0 0 }
   </li>
 
   <li> <em>(3 pts)</em> 
-    Assume a database with a table of millions of users, where each user has a
+    In a table of millions of users, each user has a
     unique 32-bit <strong>ID number</strong>.  You wish to sort by ID number.
     <strong>Which</strong> sorting algorithm (of the ones we learned)
     would be most appropriate?  <strong>Why</strong>?
@@ -190,14 +190,22 @@ ol.main > li { padding: 1em 0 0 0 }
   <li> <em>(6 pts)</em>
     Is <strong>deletion</strong> in a binary search tree
     <strong>commutative</strong>?
-    I.e., do "Delete(X); Delete(Y)" and "Delete(Y); Delete(X)"
-    always result in the same tree?
+    I.e., do "del(x), del(y)" and "del(y), del(x)"
+    always yield the same tree?
     <strong>Prove</strong> or give a smallest counterexample.
     Assume deletion uses successor.
     <p class="soln">
     FALSE: consider the BST with pre-order <code>BADC</code>:
     <br/> <code>-A -B</code> results in <code>DC</code>, but
     <br/> <code>-B -A</code> results in <code>CD</code> </p>
+  </li>
+
+  <li> <em>(4 pts)</em>
+    Recall that <strong>depth-first search</strong> is `Theta(V+E)`
+    when using adjacency lists. <br/>
+    What is its running time if an
+    <strong>adjacency matrix</strong> is used instead?
+    <p class="soln"> `Theta(V^2)`, the size of the adjacency matrix</p>
   </li>
 
   <li> Demonstrate inserting the following in order.
@@ -232,10 +240,10 @@ ol.main > li { padding: 1em 0 0 0 }
     <td>28%</td><td> 6%</td><td> 4%</td><td>16%</td><td>26%</td>
     <td> 2%</td><td> 8%</td><td> 3%</td><td> 7%</td></tr></tbody></table>
     <ol type="a">
-    <li> <em>(6 pts)</em> Construct a <strong>Huffman tree</strong>
-      to encode these colours efficiently, following the pseudocode in lecture.
+    <li> <em>(6 pts)</em> Construct a <strong>Huffman tree</strong>,
+      following the pseudocode in lecture.
     </li>
-    <li> <em>(4 pts)</em> Derive the <strong>compression ratio</strong>
+    <li> <em>(3 pts)</em> Derive the <strong>compression ratio</strong>
       relative to fixed-length encoding.
       <p class="soln">
       To encode 100 symbols: 2(26+28) + 3(8+16) + 4(4+6+7) + 5(2+3) = 
@@ -259,8 +267,8 @@ ol.main > li { padding: 1em 0 0 0 }
     guest at the table, either directly or indirectly
     (via a series of intermediate friends).
     <ol type="a">
-    <li> <em>(6 pts)</em> Describe (pseudocode) an efficient 
-      <strong>algorithm</strong> to minimise the number of tables 
+      <li> <em>(5 pts)</em> <strong>Describe</strong> an efficient 
+      algorithm to minimise the number of <strong>tables</strong> 
       needed while meeting this constraint.
       <p class="soln">
       If guests are vertices, and relationships are edges, then the
@@ -272,14 +280,6 @@ ol.main > li { padding: 1em 0 0 0 }
       of your algorithm.
       <p class="soln"> `O(|V| + |E|)` </p> </li>
     </ol>
-  </li>
-
-  <li> <em>(4 pts)</em>
-    Recall that <strong>depth-first search</strong> is `Theta(V+E)`
-    when using adjacency lists. <br/>
-    What is its running time if an
-    <strong>adjacency matrix</strong> is used instead?
-    <p class="soln"> `Theta(V^2)`, the size of the adjacency matrix</p>
   </li>
 
   <li><em>(10 pts)</em>
@@ -337,6 +337,11 @@ ol.main > li { padding: 1em 0 0 0 }
     (oo, -1, -2, 0, -1, 1), (oo, 0, -1, 2, 0, 3), (oo, -2, -3, 0, -2, 0))`
     </li>
     </ul>
+  </li>
+
+  <li> <em>(2 pts)</em> 
+    Which of the many algorithms we learned in this course is your 
+    <strong>favourite</strong>, or sticks in your mind the most? Why?
   </li>
 
 </ol>
