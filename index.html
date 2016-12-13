@@ -168,10 +168,6 @@
     <p class="soln"> `O(n log n)` </p>
   </li>
 
-  <li>
-    <p><em>(8 pts)</em> Chapter 8: counting sort, radix sort, bucket sort</p>
-  </li>
-
   <li> <em>(4 pts)</em> 
     <strong>Prove</strong> or disprove: <strong>counting sort</strong>
     on a list of `n` integers runs in `O(n)` time.
@@ -198,7 +194,7 @@
 
   <li> Demonstrate inserting the following in order.
     If insertion fails, just note it.
-    <code>[ 10, 15, 12, 3, 1, 13, 4, 17, 8 ]</code><ol type="a">
+    <code>[ 10, 15, 12, 14, 1, 13, 4, 17, 8 ]</code><ol type="a">
     <li> <em>(3 pts)</em> a hash table of size `m=11` with 
       division hash and <strong>chaining</strong></li>
     <li> <em>(3 pts)</em> a hash table of size `m=11` with 
@@ -206,15 +202,19 @@
     <li> <em>(3 pts)</em> a hash table of size `m=11` with 
       division hash and <strong>quadratic probing</strong>
       (`c_1=1, c_2=1`)</li>
-    <li> <em>(3 pts)</em> a hash table of size `m=11` with 
+    <li> <em>(4 pts)</em> a hash table of size `m=11` with 
       <strong>double-hashing</strong>
       using `h_1` as division hash and `h_2(k) = 5-(k mod 5)`</li>
-    <li> <em>(6 pts)</em> a <strong>binary search tree</strong></li>
+    <li> <em>(4 pts)</em> a <strong>binary search tree</strong></li>
     <li> <em>(6 pts)</em> a <strong>B-tree</strong> with `t=2`</li>
     </ol>
   </li>
 
-  <li> [Huffman, team colours] <br/>
+  <li> You are managing a large youth-sports database; each participant
+    is assigned one of nine <strong>team colours</strong>.
+    The list of colour assignments is very long, and you would like to
+    <strong>compress</strong> it.  The colours and relative frequencies
+    are given below: <br/>
     <table><tbody><tr>
     <th> R </th><th> O </th><th> Y </th><th> G </th><th> B </th>
     <th> I </th><th> V </th><th> W </th><th> K </th></tr><tr>
@@ -288,7 +288,7 @@
     </p>
   </li>
 
-  <li> <em>(12 pts)</em> 
+  <li> <em>(10 pts)</em> 
     The following graph is the same as above except `w(c,b)=1`.
     Demonstrate <strong>Floyd-Warshall</strong> for finding all-pairs 
     shortest paths.  Show the `D` matrix after each iteration `k`.
