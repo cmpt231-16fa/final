@@ -169,8 +169,8 @@ ol.main > li { padding: 1em 0 0 0 }
   <li> <em>(4 pts)</em>
     Suppose we have a <strong>partitioning</strong> scheme, called
     <code>LopsidedPart</code>, for Quicksort.  <code>LopsidedPart</code>
-    can perform a partition in `O(n)` time, but can only guarantee that
-    the smaller portion is at least <em>1/10-th</em> of the array.
+    can perform a partition in `O(n)` time, but the larger portion
+    can be up to <em>99%</em> of the array.
     What is the <strong>worst-case</strong> complexity of Quicksort 
     using <code>LopsidedPart</code>?  Why?
     <p class="soln"> `O(n log n)` </p>
@@ -263,13 +263,13 @@ ol.main > li { padding: 1em 0 0 0 }
     are <strong>known</strong> by `u`.
     Assume <strong>commutativity</strong>;
     i.e., if `u` knows `v`, then `v` also knows `u`.
-    We wish to ensure that each guest in a table knows every other
-    guest at the table, either directly or indirectly
+    We wish to <strong>minimise</strong> the number of tables 
+    while ensuring that each guest knows <strong>every</strong>
+    other guest at his/her table, either directly or indirectly
     (via a series of intermediate friends).
     <ol type="a">
       <li> <em>(5 pts)</em> <strong>Describe</strong> an efficient 
-      algorithm to minimise the number of <strong>tables</strong> 
-      needed while meeting this constraint.
+      algorithm to solve this.
       <p class="soln">
       If guests are vertices, and relationships are edges, then the
       problem is just the <strong>connected component</strong>
