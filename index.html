@@ -140,7 +140,7 @@ ol.main > li { padding: 1em 0 0 0 }
   </li>
 
   <li> <em>(6 pts)</em> 
-    Let `F_0 = F_1 = 1, and F_n = F_(n-2) + F_(n-1) forall n > 1`. <br/>
+    Let `F_0 = F_1 = 1, and F_n = F_(n-2) + F_(n-1), forall n > 1`. <br/>
     Let `phi = (1+sqrt 5)/2 ~~ 1.62`, such that `phi^2 = phi + 1`.
     <strong>Prove by induction</strong>: `F_n <= phi^n`
     <p class="soln">
@@ -190,9 +190,9 @@ ol.main > li { padding: 1em 0 0 0 }
   <li> <em>(6 pts)</em>
     Is <strong>deletion</strong> in a binary search tree
     <strong>commutative</strong>?
-    I.e., do <code>Delete(X); Delete(Y)</code> and
-    <code>Delete(Y); Delete(X)</code> always result in the same tree?
-    Prove or give a smallest counterexample.
+    I.e., do "Delete(X); Delete(Y)" and "Delete(Y); Delete(X)"
+    always result in the same tree?
+    <strong>Prove</strong> or give a smallest counterexample.
     Assume deletion uses successor.
     <p class="soln">
     FALSE: consider the BST with pre-order <code>BADC</code>:
@@ -201,8 +201,8 @@ ol.main > li { padding: 1em 0 0 0 }
   </li>
 
   <li> Demonstrate inserting the following in order.
-    If insertion fails, just note it.
-    <code>[ 10, 15, 12, 14, 1, 13, 4, 17, 8 ]</code>
+	  If insertion fails, just note it. <br/>
+    <code>[ 10, 15, 12, 14, 1, 13, 4, 17, 8, 9 ]</code>
     <ol type="a">
     <li> <em>(3 pts)</em> a hash table of size `m=11` with 
       division hash and <strong>chaining</strong></li>
@@ -214,8 +214,10 @@ ol.main > li { padding: 1em 0 0 0 }
     <li> <em>(4 pts)</em> a hash table of size `m=11` with 
       <strong>double-hashing</strong>
       using `h_1` as division hash and `h_2(k) = 5-(k mod 5)`</li>
-    <li> <em>(4 pts)</em> a <strong>binary search tree</strong></li>
-    <li> <em>(6 pts)</em> a <strong>B-tree</strong> with `t=2`</li>
+    <li> <em>(3 pts)</em> a <strong>binary search tree</strong></li>
+    <li> <em>(6 pts)</em> a <strong>B-tree</strong> with `t=2`
+      (pre-emptive split/merge, as in lecture)</li>
+    <li> <em>(2 pts)</em> Now, <strong>delete</strong> 13 from the B-tree.</li>
     </ol>
   </li>
 
@@ -230,7 +232,7 @@ ol.main > li { padding: 1em 0 0 0 }
     <td>28%</td><td> 6%</td><td> 4%</td><td>16%</td><td>26%</td>
     <td> 2%</td><td> 8%</td><td> 3%</td><td> 7%</td></tr></tbody></table>
     <ol type="a">
-    <li> <em>(8 pts)</em> Construct a <strong>Huffman tree</strong>
+    <li> <em>(6 pts)</em> Construct a <strong>Huffman tree</strong>
       to encode these colours efficiently, following the pseudocode in lecture.
     </li>
     <li> <em>(4 pts)</em> Derive the <strong>compression ratio</strong>
@@ -274,7 +276,8 @@ ol.main > li { padding: 1em 0 0 0 }
 
   <li> <em>(4 pts)</em>
     Recall that <strong>depth-first search</strong> is `Theta(V+E)`
-    when using adjacency lists.  What is its running time if an
+    when using adjacency lists. <br/>
+    What is its running time if an
     <strong>adjacency matrix</strong> is used instead?
     <p class="soln"> `Theta(V^2)`, the size of the adjacency matrix</p>
   </li>
@@ -283,8 +286,8 @@ ol.main > li { padding: 1em 0 0 0 }
     In the <strong>left-hand</strong> graph below, demonstrate
     <strong>Bellman-Ford</strong> for shortest paths from
     the source `a`:
-    <br><img src="img/bellman-ford.svg" style="max-width:45%; height:20em"/>
-    <img src="img/floyd-warshall.svg" style="max-width:45%; height:20em"/>
+    <br><img src="img/bellman-ford.svg" style="width:45%"/>
+    <img src="img/floyd-warshall.svg" style="width:45%"/>
     <ul class="soln">
     <li>Pass 1: a:0, b:5, c:4, d:7, e:5, f:8</li>
     <li>Pass 2: a:0, b:3, c:4, d:7, e:5, f:8</li>
