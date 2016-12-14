@@ -4,8 +4,8 @@ title: "Practise Final: CMPT231"
 subtitle: "Tue 13 Dec 2016 14:00-16:00"
 ext-js:
 - "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"
-- "/js/soln.js"
-ext-css: "/css/soln.css"
+- "../js/soln.js"
+ext-css: "../css/soln.css"
 
 ---
 
