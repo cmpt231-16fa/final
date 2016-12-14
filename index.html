@@ -261,7 +261,10 @@ ol.main > li { padding: 1em 0 0 0 }
 
     <li> <em>(3 pts)</em> A <strong>binary search tree</strong>
       <p class="soln"> The tree is quite unbalanced; preorder:
-      <code>[ 10 1 4 7 9 15 12 14 13 23 ]</code></p>
+      <code>[ 10 1 4 7 9 15 12 14 13 23 ]</code><br/>
+      <img src="img/bst.png" style="max-width: 80%"/><br/>
+      (<a href="http://btv.melezinek.cz/binary-search-tree.html">BST demo</a>)
+      </p>
     </li>
 
     <li> <em>(6 pts)</em> A <strong>B-tree</strong> with `t=2`
@@ -380,6 +383,9 @@ ol.main > li { padding: 1em 0 0 0 }
     Since the shortest-path estimates keep changing even after
     `|V|-1 = 5` iterations, we observe there is a 
     negative-weight loop (b, d, f, e, c) of net weight -1.
+    The shortest-paths problem is not well-defined on this graph.
+    For any path from `a` to `f`, one can construct a path of 
+    even lower weight just by traversing the above loop another time.
     </p>
   </li>
 
