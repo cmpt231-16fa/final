@@ -73,7 +73,7 @@ ext-css: "../css/soln.css"
   <br/> Total ops: 2(11+12)c + 3(4+6+7)c + 4(2+3)c = 117c </span>
 
 1. *(8 pts)* Demonstrate finding the **strongly-connected components** of the following graph: <br/>
-  ![SCC](img/components.svg)
+  ![SCC](../img/components.svg)
   <span class="soln"> Edges between components:
   (g, af), (af, bde), (g, bde), (bde, c), (c, h), (g, h) </span>
 
