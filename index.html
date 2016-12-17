@@ -167,7 +167,17 @@ ol.main > li { padding: 1em 0 0 0 }
     on the following. How many <strong>swaps</strong>?
     <code>[ F, L, B, C, M, X, D, V, T, S ]</code>
     <p class="soln"> 28 swaps total. <br/>
-    After the initial heapify: [ X V F T S B D C L M ]</p>
+    Initial heapify in 6: [ X V F T S B D C L M ]<br/>
+    Swap(X) and Heapify(M) in 3: [ V T F M S B D C L ]<br/>
+    Swap(V) and Heapify(L) in 3: [ T S F M L B D C ]<br/>
+    Swap(T) and Heapify(C) in 3: [ S M F C L B D ]<br/>
+    Swap(S) and Heapify(D) in 3: [ M L F C D B ]<br/>
+    Swap(M) and Heapify(B) in 3: [ L D F C B ]<br/>
+    Swap(L) and Heapify(B) in 3: [ F D B C ]<br/>
+    Swap(F) and Heapify(C) in 2: [ D C B ]<br/>
+    Swap(D) and Heapify(B) in 2: [ C B ]<br/>
+    Swap(C) in 1
+    </p>
   </li>
 
   <li> <em>(4 pts)</em>
